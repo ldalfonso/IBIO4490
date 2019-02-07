@@ -176,6 +176,8 @@ See [here](ssh.md) for different types of SSH connection with respect to your OS
 
 1. What is the ``grep``command?
 
+``Respuesta:`` El comando ``grep`` sirve para encontar en un archivo un objetivo, imprimiendo todas las líneas que contengan esa palabra. Su uso más común es para buscar información en una base de datos simple o en un archivo estructurado.
+
 2. What is the meaning of ``#!/bin/python`` at the start of scripts?
 
 3. Download using ``wget`` the [*bsds500*](https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/resources.html#bsds500) image segmentation database, and decompress it using ``tar`` (keep it in you hard drive, we will come back over this data in a few weeks).
