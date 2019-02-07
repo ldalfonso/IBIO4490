@@ -176,15 +176,23 @@ See [here](ssh.md) for different types of SSH connection with respect to your OS
 
 1. What is the ``grep``command?
 
-``Respuesta:`` El comando ``grep`` sirve para encontar en un archivo un objetivo, imprimiendo todas las líneas que contengan esa palabra. Su uso más común es para buscar información en una base de datos simple o en un archivo estructurado.
+``Respuesta:`` El comando ``grep`` sirve para encontar en un archivo un objetivo, imprimiendo todas las líneas que contengan esa  palabra. Su uso más común es para buscar información en una base de datos simple o en un archivo estructurado [1].
 
 2. What is the meaning of ``#!/bin/python`` at the start of scripts?
 
+``Respuesta:`` La línea ``#!/bin/phyton`` se refiere a que el script a trabajar debe ser corrido en Phyton para obtener los resultados queridos.
+
 3. Download using ``wget`` the [*bsds500*](https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/resources.html#bsds500) image segmentation database, and decompress it using ``tar`` (keep it in you hard drive, we will come back over this data in a few weeks).
+
+``Respuesta:`` Para descargar la base de datos mencionada se utilizó el comando ``wget`` y el url de la página que permite la descarga de [*bsds500*]. Por otro lado para descomprimir este archivo se utilizó el comando ``tar`` con su combinación ``-xf``, obteniendo una carpeta de archivos con el nombre de BSR.
  
 4. What is the disk size of the uncompressed dataset, How many images are in the directory 'BSR/BSDS500/data/images'?
+
+``Respuesta:`` Para conocer el tamaño en el disco de la carpeta anteriormente descomprimida, BSR, se utilizó el comando ``du`` con su combinación ``-hs``, el cual da se encarga de mostrar el total del espacio utilizado de una carpeta, en un formato humanamente legible [2], obteniendo un resultado de 73M. Por otro lado, para conocer el número de imágenes del directorio 'BSR/BSDS500/data/images', se utilizó el comando ``find``, el cual se encarga de buscar los archivos que tienen en su nombre .jpg, posteriormente se utiliza el comando ``identify`` para que identifique los archivos encontrados anteriormente y con el comando ``wc`` y su combinación ``-l``, se cuentan el número de archivos encontrados anteriormente, obteniendo así un resultado de 500 imágenes.
  
-5. What are all the different resolutions? What is their format? Tip: use ``awk``, ``sort``, ``uniq`` 
+5. What are all the different resolutions? What is their format? Tip: use ``awk``, ``sort``, ``uniq``
+
+``Respuesta``
 
 6. How many of them are in *landscape* orientation (opposed to *portrait*)? Tip: use ``awk`` and ``cut``
  
