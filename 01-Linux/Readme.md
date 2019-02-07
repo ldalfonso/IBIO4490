@@ -206,6 +206,8 @@ See [here](ssh.md) for different types of SSH connection with respect to your OS
 
 ![](https://github.com/ldalfonso/IBIO4490/blob/master/01-Linux/6.PNG)
 
+![](https://github.com/ldalfonso/IBIO4490/blob/master/01-Linux/6.1.PNG)
+
 7. Crop all images to make them square (256x256) and save them in a different folder. Tip: do not forget about  [imagemagick](http://www.imagemagick.org/script/index.php).
 
 
