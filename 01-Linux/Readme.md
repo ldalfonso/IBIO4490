@@ -184,9 +184,9 @@ See [here](ssh.md) for different types of SSH connection with respect to your OS
 
 ``Respuesta:`` Para descargar la base de datos mencionada se utilizó el comando ``wget`` y el url de la página que permite la descarga de [*bsds500*]. Por otro lado para descomprimir este archivo se utilizó el comando ``tar`` con su combinación ``-xf``, obteniendo una carpeta de archivos con el nombre de BSR.
 
-![] (https://github.com/ldalfonso/IBIO4490/blob/master/01-Linux/3.1.PNG)
+![](https://github.com/ldalfonso/IBIO4490/blob/master/01-Linux/3.1.PNG)
 
-![] (https://github.com/ldalfonso/IBIO4490/blob/master/01-Linux/3.2.PNG)
+![](https://github.com/ldalfonso/IBIO4490/blob/master/01-Linux/3.2.PNG)
 
 4. What is the disk size of the uncompressed dataset, How many images are in the directory 'BSR/BSDS500/data/images'?
 
