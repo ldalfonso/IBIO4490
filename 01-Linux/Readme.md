@@ -192,7 +192,7 @@ See [here](ssh.md) for different types of SSH connection with respect to your OS
  
 5. What are all the different resolutions? What is their format? Tip: use ``awk``, ``sort``, ``uniq``
 
-``Respuesta``
+``Respuesta`` jhgrhrgroghutghutighfiughrt
 
 6. How many of them are in *landscape* orientation (opposed to *portrait*)? Tip: use ``awk`` and ``cut``
  
