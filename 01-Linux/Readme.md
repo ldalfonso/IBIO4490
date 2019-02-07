@@ -177,9 +177,11 @@ See [here](ssh.md) for different types of SSH connection with respect to your OS
 1. What is the ``grep``command?
 
 ``Respuesta:`` El comando ``grep`` sirve para encontar en un archivo un objetivo, imprimiendo todas las líneas que contengan esa  palabra. Su uso más común es para buscar información en una base de datos simple o en un archivo estructurado [1].
+
 2. What is the meaning of ``#!/bin/python`` at the start of scripts?
 
 ``Respuesta:`` La línea ``#!/bin/phyton`` se refiere a que el script a trabajar debe ser corrido en Phyton para obtener los resultados queridos.
+
 3. Download using ``wget`` the [*bsds500*](https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/resources.html#bsds500) image segmentation database, and decompress it using ``tar`` (keep it in you hard drive, we will come back over this data in a few weeks).
 
 ``Respuesta:`` Para descargar la base de datos mencionada se utilizó el comando ``wget`` y el url de la página que permite la descarga de [*bsds500*]. Por otro lado para descomprimir este archivo se utilizó el comando ``tar`` con su combinación ``-xf``, obteniendo una carpeta de archivos con el nombre de BSR.
@@ -209,6 +211,8 @@ See [here](ssh.md) for different types of SSH connection with respect to your OS
 ![](https://github.com/ldalfonso/IBIO4490/blob/master/01-Linux/6.1.PNG)
 
 7. Crop all images to make them square (256x256) and save them in a different folder. Tip: do not forget about  [imagemagick](http://www.imagemagick.org/script/index.php).
+
+``Respuesta`` Para lograr el objetivo de este punto se creo un script con el comando ``touch``, el cual crea una carpeta llamada "crop_images", luego, dentro de esta carpeta crea una nueva llamada "images" y dentro de esta crea tres carpetas correspondientes a "test", "train" y "val". Luego de crear las carpetas mencionadas se realizo un recorrido utilizando el comando ``ls``, el cual se encarga de listar todos los archivos que están en el directorio actual y por último con el comando ``convert`` y ``crop`` se cortan las imágenes a 256x256 y se mandan a la nueva carpeta creada con el mismo nombre.
 
 
 # Report
