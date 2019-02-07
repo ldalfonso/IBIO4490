@@ -214,6 +214,8 @@ See [here](ssh.md) for different types of SSH connection with respect to your OS
 
 ``Respuesta`` Para lograr el objetivo de este punto se creo un script con el comando ``touch``, el cual crea una carpeta llamada "crop_images", luego, dentro de esta carpeta crea una nueva llamada "images" y dentro de esta crea tres carpetas correspondientes a "test", "train" y "val". Luego de crear las carpetas mencionadas se realizo un recorrido utilizando el comando ``ls``, el cual se encarga de listar todos los archivos que están en el directorio actual y por último con el comando ``convert`` y ``crop`` se cortan las imágenes a 256x256 y se mandan a la nueva carpeta creada con el mismo nombre.
 
+![](https://github.com/ldalfonso/IBIO4490/blob/master/01-Linux/7.PNG)
+
 
 # Report
 
