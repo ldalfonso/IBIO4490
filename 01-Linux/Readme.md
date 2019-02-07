@@ -192,7 +192,7 @@ See [here](ssh.md) for different types of SSH connection with respect to your OS
  
 5. What are all the different resolutions? What is their format? Tip: use ``awk``, ``sort``, ``uniq``
 
-``Respuesta`` jhgrhrgroghutghutighfiughrt
+``Respuesta`` Para encontrar las diferentes resoluciones de las imágenes se utilizaron los mismos comandos del punto anterior a excepción de ``wc`` e incluyendo ``awk``, ``sort`` y ``uniq``. El comando de ``awk`` se encarga de imprimir una columna de la línea de texto obtenida con los comandos de ``find`` e ``identify``. Por otro lado, el comando de ``sort`` toma una lista de elementos y los ordena alfabéticamente y numéricamente. Por último, el comando de ``uniq`` toma una lista de elementos y elimina las líneas duplicadas. Con lo anterior se obtuvo como resultado que las resoluciones de las imágenes son de 321x481 y 481x321, mientras que el formato de las mimas es de JPEG.
 
 6. How many of them are in *landscape* orientation (opposed to *portrait*)? Tip: use ``awk`` and ``cut``
  
