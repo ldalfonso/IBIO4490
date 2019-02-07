@@ -183,14 +183,23 @@ See [here](ssh.md) for different types of SSH connection with respect to your OS
 3. Download using ``wget`` the [*bsds500*](https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/resources.html#bsds500) image segmentation database, and decompress it using ``tar`` (keep it in you hard drive, we will come back over this data in a few weeks).
 
 ``Respuesta:`` Para descargar la base de datos mencionada se utilizó el comando ``wget`` y el url de la página que permite la descarga de [*bsds500*]. Por otro lado para descomprimir este archivo se utilizó el comando ``tar`` con su combinación ``-xf``, obteniendo una carpeta de archivos con el nombre de BSR.
+
 ![] (https://github.com/ldalfonso/IBIO4490/blob/master/01-Linux/3.1.PNG)
+
 ![] (https://github.com/ldalfonso/IBIO4490/blob/master/01-Linux/3.2.PNG)
+
 4. What is the disk size of the uncompressed dataset, How many images are in the directory 'BSR/BSDS500/data/images'?
+
 ``Respuesta:`` Para conocer el tamaño en el disco de la carpeta anteriormente descomprimida, BSR, se utilizó el comando ``du`` con su combinación ``-hs``, el cual da se encarga de mostrar el total del espacio utilizado de una carpeta, en un formato humanamente legible [2], obteniendo un resultado de 73M. Por otro lado, para conocer el número de imágenes del directorio 'BSR/BSDS500/data/images', se utilizó el comando ``find``, el cual se encarga de buscar los archivos que tienen en su nombre .jpg, posteriormente se utiliza el comando ``identify`` para que identifique los archivos encontrados anteriormente y con el comando ``wc`` y su combinación ``-l``, se cuentan el número de archivos encontrados anteriormente, obteniendo así un resultado de 500 imágenes.
+
 5. What are all the different resolutions? What is their format? Tip: use ``awk``, ``sort``, ``uniq``
+
 ``Respuesta`` Para encontrar las diferentes resoluciones de las imágenes se utilizaron los mismos comandos del punto anterior a excepción de ``wc`` e incluyendo ``awk``, ``sort`` y ``uniq``. El comando de ``awk`` se encarga de imprimir una columna de la línea de texto obtenida con los comandos de ``find`` e ``identify``. Por otro lado, el comando de ``sort`` toma una lista de elementos y los ordena alfabéticamente y numéricamente. Por último, el comando de ``uniq`` toma una lista de elementos y elimina las líneas duplicadas. Con lo anterior se obtuvo como resultado que las resoluciones de las imágenes son de 321x481 y 481x321, mientras que el formato de las mimas es de JPEG.
+
 6. How many of them are in *landscape* orientation (opposed to *portrait*)? Tip: use ``awk`` and ``cut``
+
 ``Respuesta`` Para encontrar la cantidad de imágenes que se encuentran en una orientación de landscape se creo un script con el comando ``touch``, el cual primero creaba dos carpetas que reciben como nombre "landscape" y "portrait", para posteriormente guardar las imágenes. Luego por medio de un recorrido en cada las imágenes las cuales fueron detectadas con el comando ``find`` se identifico si en la línea de texto existía la orientación 481x321, esto con los comandos ``identify`` y ``grep``, entonces si lo anterior ocurría la imagen era copiada a la carpeta landscape y si no era copiada a la carpeta portrait . Por último al finalizar el ciclo, por medio del comando ``wc -l`` se contaban el número de imágenes en la carpeta de landscape, lo cual dió como resultado 348.
+
 7. Crop all images to make them square (256x256) and save them in a different folder. Tip: do not forget about  [imagemagick](http://www.imagemagick.org/script/index.php).
 
 
