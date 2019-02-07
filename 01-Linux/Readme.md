@@ -176,7 +176,9 @@ See [here](ssh.md) for different types of SSH connection with respect to your OS
 
 1. What is the ``grep``command?
 
-``Respuesta:`` El comando ``grep`` sirve para encontar en un archivo un objetivo, imprimiendo todas las líneas que contengan esa  palabra. Su uso más común es para buscar información en una base de datos simple o en un archivo estructurado [1].
+``Respuesta:`` El comando ``grep`` sirve para encontar en un archivo un patrón, imprimiendo todas las líneas que contengan esa  palabra. Su uso más común es para buscar información en una base de datos simple o en un archivo estructurado.
+
+![](https://github.com/ldalfonso/IBIO4490/blob/master/01-Linux/1.PNG)
 
 2. What is the meaning of ``#!/bin/python`` at the start of scripts?
 
@@ -192,13 +194,13 @@ See [here](ssh.md) for different types of SSH connection with respect to your OS
 
 4. What is the disk size of the uncompressed dataset, How many images are in the directory 'BSR/BSDS500/data/images'?
 
-``Respuesta:`` Para conocer el tamaño en el disco de la carpeta anteriormente descomprimida, BSR, se utilizó el comando ``du`` con su combinación ``-hs``, el cual da se encarga de mostrar el total del espacio utilizado de una carpeta, en un formato humanamente legible [2], obteniendo un resultado de 73M. Por otro lado, para conocer el número de imágenes del directorio 'BSR/BSDS500/data/images', se utilizó el comando ``find``, el cual se encarga de buscar los archivos que tienen en su nombre .jpg, posteriormente se utiliza el comando ``identify`` para que identifique los archivos encontrados anteriormente y con el comando ``wc`` y su combinación ``-l``, se cuentan el número de archivos encontrados anteriormente, obteniendo así un resultado de 500 imágenes.
+``Respuesta:`` Para conocer el tamaño en el disco de la carpeta anteriormente descomprimida, BSR, se utilizó el comando ``du`` con su combinación ``-hs``, el cual da se encarga de mostrar el total del espacio utilizado de una carpeta, en un formato humanamente legible [1], obteniendo un resultado de 73M. Por otro lado, para conocer el número de imágenes del directorio 'BSR/BSDS500/data/images', se utilizó el comando ``find``, el cual se encarga de buscar los archivos que tienen en su nombre .jpg, posteriormente se utiliza el comando ``identify`` para que identifique los archivos encontrados anteriormente y con el comando ``wc`` y su combinación ``-l``, se cuentan el número de archivos encontrados anteriormente, obteniendo así un resultado de 500 imágenes.
 
 ![](https://github.com/ldalfonso/IBIO4490/blob/master/01-Linux/4.PNG)
 
 5. What are all the different resolutions? What is their format? Tip: use ``awk``, ``sort``, ``uniq``
 
-``Respuesta`` Para encontrar las diferentes resoluciones de las imágenes se utilizaron los mismos comandos del punto anterior a excepción de ``wc`` e incluyendo ``awk``, ``sort`` y ``uniq``. El comando de ``awk`` se encarga de imprimir una columna de la línea de texto obtenida con los comandos de ``find`` e ``identify``. Por otro lado, el comando de ``sort`` toma una lista de elementos y los ordena alfabéticamente y numéricamente. Por último, el comando de ``uniq`` toma una lista de elementos y elimina las líneas duplicadas. Con lo anterior se obtuvo como resultado que las resoluciones de las imágenes son de 321x481 y 481x321, mientras que el formato de las mimas es de JPEG.
+``Respuesta`` Para encontrar las diferentes resoluciones de las imágenes se utilizaron los mismos comandos del punto anterior a excepción de ``wc`` e incluyendo ``awk``, ``sort`` y ``uniq``. El comando de ``awk`` se encarga de imprimir una columna de la línea de texto obtenida con los comandos de ``find`` e ``identify`` [2]. Por otro lado, el comando de ``sort`` toma una lista de elementos y los ordena alfabéticamente y numéricamente. Por último, el comando de ``uniq`` toma una lista de elementos y elimina las líneas duplicadas. Con lo anterior se obtuvo como resultado que las resoluciones de las imágenes son de 321x481 y 481x321, mientras que el formato de las mimas es de JPEG [3].
 
 ![](https://github.com/ldalfonso/IBIO4490/blob/master/01-Linux/5.PNG)
 
@@ -215,6 +217,14 @@ See [here](ssh.md) for different types of SSH connection with respect to your OS
 ``Respuesta`` Para lograr el objetivo de este punto se creo un script con el comando ``touch``, el cual crea una carpeta llamada "crop_images", luego, dentro de esta carpeta crea una nueva llamada "images" y dentro de esta crea tres carpetas correspondientes a "test", "train" y "val". Luego de crear las carpetas mencionadas se realizo un recorrido utilizando el comando ``ls``, el cual se encarga de listar todos los archivos que están en el directorio actual y por último con el comando ``convert`` y ``crop`` se cortan las imágenes a 256x256 y se mandan a la nueva carpeta creada con el mismo nombre.
 
 ![](https://github.com/ldalfonso/IBIO4490/blob/master/01-Linux/7.PNG)
+
+# Referencias
+
+[1] J. B., "Los comandos SSH usados más frecuentemente y su utilización", KB.IWEB.COM, 2016. [Online]. Disponible en: https://kb.iweb.com/hc/es/articles/230241928-Los-comandos-SSH-usados-m%C3%A1s-frecuentemente-y-su-utilizaci%C3%B3n. 
+
+[2] S. Suri, "Using awk over a remote ssh connection", A system engineer's notebook, 2017. [Online]. Disponible en: http://asystemengineersnotebook.blogspot.com/2017/01/using-awk-over-remote-ssh-connection.html. 
+
+[3] Linode, "Manipulate Lists with sort and uniq", Linode Guides & Tutorials, 2018. [Online]. Disponible en: https://www.linode.com/docs/tools-reference/tools/manipulate-lists-with-sort-and-uniq/. 
 
 
 # Report
