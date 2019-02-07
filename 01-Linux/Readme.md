@@ -192,9 +192,13 @@ See [here](ssh.md) for different types of SSH connection with respect to your OS
 
 ``Respuesta:`` Para conocer el tamaño en el disco de la carpeta anteriormente descomprimida, BSR, se utilizó el comando ``du`` con su combinación ``-hs``, el cual da se encarga de mostrar el total del espacio utilizado de una carpeta, en un formato humanamente legible [2], obteniendo un resultado de 73M. Por otro lado, para conocer el número de imágenes del directorio 'BSR/BSDS500/data/images', se utilizó el comando ``find``, el cual se encarga de buscar los archivos que tienen en su nombre .jpg, posteriormente se utiliza el comando ``identify`` para que identifique los archivos encontrados anteriormente y con el comando ``wc`` y su combinación ``-l``, se cuentan el número de archivos encontrados anteriormente, obteniendo así un resultado de 500 imágenes.
 
+![](https://github.com/ldalfonso/IBIO4490/blob/master/01-Linux/4.PNG)
+
 5. What are all the different resolutions? What is their format? Tip: use ``awk``, ``sort``, ``uniq``
 
 ``Respuesta`` Para encontrar las diferentes resoluciones de las imágenes se utilizaron los mismos comandos del punto anterior a excepción de ``wc`` e incluyendo ``awk``, ``sort`` y ``uniq``. El comando de ``awk`` se encarga de imprimir una columna de la línea de texto obtenida con los comandos de ``find`` e ``identify``. Por otro lado, el comando de ``sort`` toma una lista de elementos y los ordena alfabéticamente y numéricamente. Por último, el comando de ``uniq`` toma una lista de elementos y elimina las líneas duplicadas. Con lo anterior se obtuvo como resultado que las resoluciones de las imágenes son de 321x481 y 481x321, mientras que el formato de las mimas es de JPEG.
+
+![](https://github.com/ldalfonso/IBIO4490/blob/master/01-Linux/5.PNG)
 
 6. How many of them are in *landscape* orientation (opposed to *portrait*)? Tip: use ``awk`` and ``cut``
 
