@@ -204,6 +204,8 @@ See [here](ssh.md) for different types of SSH connection with respect to your OS
 
 ``Respuesta`` Para encontrar la cantidad de imágenes que se encuentran en una orientación de landscape se creo un script con el comando ``touch``, el cual primero creaba dos carpetas que reciben como nombre "landscape" y "portrait", para posteriormente guardar las imágenes. Luego por medio de un recorrido en cada las imágenes las cuales fueron detectadas con el comando ``find`` se identifico si en la línea de texto existía la orientación 481x321, esto con los comandos ``identify`` y ``grep``, entonces si lo anterior ocurría la imagen era copiada a la carpeta landscape y si no era copiada a la carpeta portrait . Por último al finalizar el ciclo, por medio del comando ``wc -l`` se contaban el número de imágenes en la carpeta de landscape, lo cual dió como resultado 348.
 
+![](https://github.com/ldalfonso/IBIO4490/blob/master/01-Linux/6.PNG)
+
 7. Crop all images to make them square (256x256) and save them in a different folder. Tip: do not forget about  [imagemagick](http://www.imagemagick.org/script/index.php).
 
 
